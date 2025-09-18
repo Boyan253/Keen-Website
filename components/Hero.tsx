@@ -18,7 +18,8 @@ export default function Hero() {
   const variationHero = {
     headline: "Practical AI, Real Results — No IT Overhaul Required",
     subheadline: "We deploy AI agents that work with your existing systems and processes. No rip-and-replace. No vendor lock-in. Just measurable improvements and continuous support.",
-    primaryCta: "Book a Free Consultation"
+    primaryCta: "Book a Free Consultation",
+    secondaryCta: "Take the AI Readiness Questionnaire"
   }
 
   const currentHero = showVariation ? variationHero : primaryHero
@@ -68,14 +69,12 @@ export default function Hero() {
                 <span>{currentHero.primaryCta}</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
-              {!showVariation && (
-                <a
-                  href="#ai-readiness"
-                  className="btn-secondary flex items-center justify-center space-x-2"
-                >
-                  <span>{currentHero.secondaryCta}</span>
-                </a>
-              )}
+              <a
+                href="#ai-readiness"
+                className="btn-secondary flex items-center justify-center space-x-2"
+              >
+                <span>{currentHero.secondaryCta}</span>
+              </a>
             </div>
 
             {/* Hero variation toggle */}
